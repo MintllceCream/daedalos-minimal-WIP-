@@ -73,6 +73,7 @@ const useSessionContextState = (): SessionContextState => {
   );
   const [wallpaperFit, setWallpaperFit] = useState(DEFAULT_WALLPAPER_FIT);
   const [wallpaperImage, setWallpaperImage] = useState(DEFAULT_WALLPAPER);
+  const [windowSkin, setWindowSkin] = useState<string | undefined>();
   const [runHistory, setRunHistory] = useState<string[]>([]);
   const [recentFiles, setRecentFiles] = useState<RecentFiles>([]);
   const updateRecentFiles = useCallback(
@@ -226,6 +227,7 @@ const useSessionContextState = (): SessionContextState => {
             views,
             wallpaperFit,
             wallpaperImage,
+            windowSkin,
             windowStates,
           }),
           true
@@ -247,6 +249,7 @@ const useSessionContextState = (): SessionContextState => {
     views,
     wallpaperFit,
     wallpaperImage,
+    windowSkin,
     windowStates,
     writeFile,
   ]);
@@ -286,6 +289,7 @@ const useSessionContextState = (): SessionContextState => {
           if (session.wallpaperImage) {
             setWallpaper(session.wallpaperImage, session.wallpaperFit);
           }
+          if (session.windowSkin) setWindowSkin(session.windowSkin);
           if (
             session.sortOrders &&
             Object.keys(session.sortOrders).length > 0
@@ -408,6 +412,7 @@ const useSessionContextState = (): SessionContextState => {
     setThemeName,
     setViews,
     setWallpaper,
+    setWindowSkin,
     setWindowStates,
     sortOrders,
     stackOrder,
@@ -416,6 +421,7 @@ const useSessionContextState = (): SessionContextState => {
     views,
     wallpaperFit,
     wallpaperImage,
+    windowSkin,
     windowStates,
   };
 };

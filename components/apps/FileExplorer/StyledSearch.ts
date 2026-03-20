@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledSearch = styled.div`
-  border: 1px solid rgb(83 83 83);
+  border: 1px solid var(--skin-color-button-shadow, rgb(83 83 83));
   display: flex;
   height: ${({ theme }) => theme.sizes.fileExplorer.navInputHeight}px;
   margin: 6px 12px 6px 0;
@@ -17,8 +17,8 @@ const StyledSearch = styled.div`
 
   input {
     appearance: none;
-    background-color: rgb(25 25 25);
-    color: #fff;
+    background-color: var(--skin-color-window, rgb(25 25 25));
+    color: var(--skin-color-window-text, #fff);
     font-family: ${({ theme }) => theme.formats.systemFont};
     font-size: 12px;
     font-weight: 400;

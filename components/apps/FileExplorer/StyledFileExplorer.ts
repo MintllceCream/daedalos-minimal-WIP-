@@ -5,6 +5,11 @@ import StyledIconFileManager from "components/system/Files/Views/Icon/StyledFile
 
 const StyledFileExplorer = styled.div`
   ${StyledDetailsFileManager}, ${StyledIconFileManager} {
+    background-color: var(--skin-color-window, inherit);
+    background-image: var(--skin-explorer-bg, none);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    color: var(--skin-color-window-text, inherit);
     height: ${({ theme }) =>
       `calc(100% - ${theme.sizes.fileExplorer.navBarHeight} - ${theme.sizes.fileExplorer.statusBarHeight})`};
   }

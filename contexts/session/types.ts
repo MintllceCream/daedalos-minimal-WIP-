@@ -51,6 +51,7 @@ export type SessionData = {
   views: Views;
   wallpaperFit: WallpaperFit;
   wallpaperImage: string;
+  windowSkin?: string;
   windowStates: WindowStates;
 };
 
@@ -75,6 +76,7 @@ export type SessionContextState = SessionData & {
   setThemeName: React.Dispatch<React.SetStateAction<ThemeName>>;
   setViews: React.Dispatch<React.SetStateAction<Views>>;
   setWallpaper: (image: string, fit?: WallpaperFit) => void;
+  setWindowSkin: React.Dispatch<React.SetStateAction<string | undefined>>;
   setWindowStates: React.Dispatch<React.SetStateAction<WindowStates>>;
   stackOrder: string[];
   updateRecentFiles: (url: string, pid: string, title?: string) => void;

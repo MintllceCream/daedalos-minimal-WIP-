@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledColumns = styled.span`
-  background-color: rgb(32 32 32);
+  background-color: var(--skin-color-button-face, rgb(32 32 32));
   display: block;
   margin-bottom: 6px;
   margin-right: ${({ theme }) => theme.sizes.fileManager.detailsStartPadding}px;
@@ -15,7 +15,7 @@ const StyledColumns = styled.span`
     height: ${({ theme }) => theme.sizes.fileManager.columnHeight}px;
 
     li {
-      color: rgb(222 222 222);
+      color: var(--skin-color-button-text, rgb(222 222 222));
       display: flex;
       font-size: 12px;
       padding-left: 6px;

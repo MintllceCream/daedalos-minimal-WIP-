@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 const StyledNavigation = styled.nav`
-  background-color: rgb(25 25 25);
+  background-color: var(--skin-color-button-face, rgb(25 25 25));
   display: flex;
   height: ${({ theme }) => theme.sizes.fileExplorer.navBarHeight};
 
   svg {
-    color: #fff;
+    color: var(--skin-color-button-text, #fff);
     fill: currentColor;
     height: 16px;
     transition: color 0.35s ease;

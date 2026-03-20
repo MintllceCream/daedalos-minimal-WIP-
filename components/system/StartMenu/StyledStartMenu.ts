@@ -20,6 +20,34 @@ const StyledStartMenu = styled(motion.nav)<StyledStartMenuProps>`
   backdrop-filter: ${({ theme }) => `blur(${theme.sizes.taskbar.panelBlur})`};
 
   ${StyledFileManager} {
+    --skin-color-scrollbar: initial;
+    --skin-scrollbar-arrow-down: initial;
+    --skin-scrollbar-arrow-down-active: initial;
+    --skin-scrollbar-arrow-down-hover: initial;
+    --skin-scrollbar-arrow-up: initial;
+    --skin-scrollbar-arrow-up-active: initial;
+    --skin-scrollbar-arrow-up-hover: initial;
+    --skin-scrollbar-thumb-v-bg: initial;
+    --skin-scrollbar-thumb-v-border: initial;
+    --skin-scrollbar-thumb-v-bot: initial;
+    --skin-scrollbar-thumb-v-bot-active: initial;
+    --skin-scrollbar-thumb-v-bot-hover: initial;
+    --skin-scrollbar-thumb-v-cap-end: initial;
+    --skin-scrollbar-thumb-v-cap-start: initial;
+    --skin-scrollbar-thumb-v-clip: initial;
+    --skin-scrollbar-thumb-v-mid: initial;
+    --skin-scrollbar-thumb-v-mid-active: initial;
+    --skin-scrollbar-thumb-v-mid-hover: initial;
+    --skin-scrollbar-thumb-v-top: initial;
+    --skin-scrollbar-thumb-v-top-active: initial;
+    --skin-scrollbar-thumb-v-top-hover: initial;
+    --skin-scrollbar-track-v-bot: initial;
+    --skin-scrollbar-track-v-cap-end: initial;
+    --skin-scrollbar-track-v-cap-start: initial;
+    --skin-scrollbar-track-v-mid: initial;
+    --skin-scrollbar-track-v-top: initial;
+    --skin-scrollbar-width: initial;
+
     ${ScrollBars(THIN_SCROLLBAR_WIDTH, -2, -1)};
     margin-top: 0;
     overflow-x: hidden;

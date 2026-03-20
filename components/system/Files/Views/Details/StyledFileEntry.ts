@@ -21,7 +21,10 @@ const StyledFileEntry = styled.li<StyledFileEntryProps>`
       position: relative;
 
       figcaption {
-        color: ${({ theme }) => theme.colors.fileEntry.text};
+        color: var(
+          --skin-color-window-text,
+          ${({ theme }) => theme.colors.fileEntry.text}
+        );
         font-size: ${({ theme }) => theme.sizes.fileEntry.fontSize};
         overflow: hidden;
         overflow-wrap: anywhere;

@@ -407,6 +407,15 @@ const directory: Processes = {
     singleton: true,
     title: "Webamp",
   },
+  WindowBlinds: {
+    Component: dynamic(() => import("components/system/WindowBlinds")),
+    allowResizing: false,
+    hasWindow: false,
+    hideTaskbarEntry: true,
+    icon: "/System/Icons/compressed.webp",
+    singleton: true,
+    title: "WindowBlinds",
+  },
 };
 
 export default directory;

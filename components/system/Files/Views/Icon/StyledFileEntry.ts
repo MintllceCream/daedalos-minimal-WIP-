@@ -19,7 +19,10 @@ const StyledFileEntry = styled.li<StyledFileEntryProps>`
       place-items: center;
 
       figcaption {
-        color: ${({ theme }) => theme.colors.fileEntry.text};
+        color: ${({ $desktop, theme }) =>
+          $desktop
+            ? theme.colors.fileEntry.text
+            : `var(--skin-color-window-text, ${theme.colors.fileEntry.text})`};
         font-size: ${({ theme }) => theme.sizes.fileEntry.fontSize};
         line-height: 1.2;
         margin: 1px 0;

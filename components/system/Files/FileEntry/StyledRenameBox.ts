@@ -12,11 +12,12 @@ const StyledRenameBox = styled.textarea.attrs<StyledRenameBoxProps>(() => ({
   ...DISBALE_AUTO_INPUT_FEATURES,
 }))`
   background-color: ${({ $darkMode }) =>
-    $darkMode ? "rgb(33, 33, 33)" : "#fff"};
+    $darkMode ? "var(--skin-color-window, rgb(33, 33, 33))" : "#fff"};
   border: ${({ $darkMode }) =>
-    `1px solid ${$darkMode ? "#fff" : "rgb(100, 100, 100)"}`};
+    `1px solid ${$darkMode ? "var(--skin-color-button-shadow, #fff)" : "rgb(100, 100, 100)"}`};
   border-radius: 0;
-  color: ${({ $darkMode }) => ($darkMode ? "#fff" : "#000")};
+  color: ${({ $darkMode }) =>
+    $darkMode ? "var(--skin-color-window-text, #fff)" : "#000"};
   font-family: inherit;
   font-size: 11.5px;
   left: ${({ $singleLineMode }) => ($singleLineMode ? "16px" : undefined)};

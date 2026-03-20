@@ -89,9 +89,11 @@ const useFolderContextMenu = (
     setForegroundId,
     setWallpaper: setSessionWallpaper,
     setIconPositions,
+    setWindowSkin,
     sortOrders,
     updateRecentFiles,
     wallpaperImage,
+    windowSkin,
   } = useSession();
   const { minimize, open } = useProcesses();
   const updateSorting = useCallback(
@@ -481,6 +483,19 @@ const useFolderContextMenu = (
                       },
                     ]
                   : []),
+                ...(windowSkin
+                  ? [
+                      {
+                        action: () => {
+                          setWindowSkin(undefined);
+                          import("utils/skinFunctions").then(
+                            ({ resetSkinVars }) => resetSkinVars()
+                          );
+                        },
+                        label: "Reset window skin",
+                      },
+                    ]
+                  : []),
               ]
             : []),
           ...(isReadOnly
@@ -596,6 +611,7 @@ const useFolderContextMenu = (
       rootFs?.mntMap,
       setForegroundId,
       setSessionWallpaper,
+      setWindowSkin,
       sortBy,
       updateDesktopIconPositions,
       updateFolder,
@@ -603,6 +619,7 @@ const useFolderContextMenu = (
       updateSorting,
       url,
       wallpaperImage,
+      windowSkin,
       writeFile,
     ]
   );

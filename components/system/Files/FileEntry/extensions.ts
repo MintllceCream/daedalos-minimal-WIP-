@@ -107,6 +107,11 @@ const types = {
     process: ["Webamp", "FileExplorer"],
     type: "Winamp Skin File",
   },
+  WindowBlindsSkin: {
+    icon: "compressed",
+    process: ["WindowBlinds"],
+    type: "WindowBlinds Skin File",
+  },
   WysiwygHtmlDocument: {
     icon: "tinymce",
     process: ["TinyMCE", ...TEXT_EDITORS],
@@ -144,6 +149,7 @@ const extensions: Record<string, Extension> = {
   ".tic": types.Tic80,
   ".ttf": types.Font,
   ".wasm": types.WasmFile,
+  ".wba": types.WindowBlindsSkin,
   ".whtml": types.WysiwygHtmlDocument,
   ".woff": types.Font,
   ".wsz": types.WinampSkin,
