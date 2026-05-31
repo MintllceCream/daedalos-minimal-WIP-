@@ -79,8 +79,6 @@ const useClassiCube = ({
   ]);
 
   useEffect(() => {
-    let cleanup: (() => void) | undefined;
-
     if (loading) {
       const newContentWindow = getContentWindow?.();
 
@@ -113,12 +111,8 @@ const useClassiCube = ({
         };
 
         loadFiles(libs, undefined, undefined, undefined, newContentWindow);
-
-        cleanup = () => canvas.removeEventListener("contextmenu", haltEvent);
       }
     }
-
-    return cleanup;
   }, [getContentWindow, id, libs, loading, mountEmFs, setLoading]);
 };
 

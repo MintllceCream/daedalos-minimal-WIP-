@@ -69,7 +69,6 @@ const useSpaceCadet = ({
         }
 
         cleanup = () => {
-          canvas.removeEventListener("contextmenu", haltEvent);
           if (timeoutId !== undefined) window.clearTimeout(timeoutId);
         };
       }
