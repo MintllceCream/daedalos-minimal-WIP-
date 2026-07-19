@@ -6,10 +6,10 @@ const StartButtonIcon = memo(() => (
     height="100%"
     stroke="currentColor" 
     strokeLinecap="round" 
-    strokeLinejoin="round"
+    strokeLinejoin="round" 
     strokeWidth="2" 
-    width="100%" 
     viewBox="0 0 24 24" 
+    width="100%" 
     xmlns="http://www.w3.org/2000/svg"
   >
     <path d="m14 10 7-7"/>
