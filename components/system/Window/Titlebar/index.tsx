@@ -122,7 +122,7 @@ const Titlebar: FC<TitlebarProps> = ({ id }) => {
     menuIsOpenRef.current = (menu.items?.length || 0) > 0;
   }, [menu.items?.length]);
 
-  return (
+ return (
     <StyledTitlebar
       $foreground={isForeground}
       className={rndDefaults.dragHandleClassName}
@@ -140,15 +140,6 @@ const Titlebar: FC<TitlebarProps> = ({ id }) => {
         onTouchStartCapture={onTouchStart}
       >
         <figure>
-          {!hideTitlebarIcon && (
-            <Icon
-              alt={title}
-              imgSize={16}
-              onClick={onIconClick}
-              onMouseDownCapture={onIconMouseDownCapture}
-              src={icon}
-            />
-          )}
           <figcaption>{title}</figcaption>
         </figure>
       </Button>
