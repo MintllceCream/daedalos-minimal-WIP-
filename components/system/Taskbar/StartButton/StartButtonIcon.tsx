@@ -4,7 +4,7 @@ const StartButtonIcon = memo(() => (
   <svg 
     fill="none" 
     height="100%"
-    stroke="currentColor" 
+    stroke="white"  {/* Change this line */}
     strokeLinecap="round" 
     strokeLinejoin="round" 
     strokeWidth="2" 
